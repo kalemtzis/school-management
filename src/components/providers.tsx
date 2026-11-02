@@ -6,6 +6,7 @@ import { ConvexReactClient } from "convex/react";
 import { ClerkProvider } from "@clerk/nextjs";
 import { ConvexProviderWithClerk } from "convex/react-clerk";
 import { useAuth } from "@clerk/nextjs";
+import { SidebarProvider } from "./ui/sidebar";
 
 const ThemeProvider = ({
   children,
@@ -26,8 +27,10 @@ export const Providers = ({ children }: { children: React.ReactNode }) => {
     >
       <ClerkProvider>
         <ConvexProviderWithClerk client={convex} useAuth={useAuth}>
-          <PolishedToaster />
-          {children}
+          <SidebarProvider>
+            <PolishedToaster />
+            {children}
+          </SidebarProvider>
         </ConvexProviderWithClerk>
       </ClerkProvider>
     </ThemeProvider>

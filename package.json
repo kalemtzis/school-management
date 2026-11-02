@@ -12,6 +12,7 @@
     "@base-ui/react": "^1.9.0",
     "@clerk/nextjs": "^7.9.21",
     "@sentry/nextjs": "^11.9.0",
+    "border-beam": "^1.4.1",
     "class-variance-authority": "^0.7.1",
     "cn": "^0.5.0",
     "convex": "^1.48.0",

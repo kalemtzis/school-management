@@ -27,7 +27,7 @@ export const Providers = ({ children }: { children: React.ReactNode }) => {
     >
       <ClerkProvider>
         <ConvexProviderWithClerk client={convex} useAuth={useAuth}>
-          <SidebarProvider>
+          <SidebarProvider defaultOpen>
             <PolishedToaster />
             {children}
           </SidebarProvider>
